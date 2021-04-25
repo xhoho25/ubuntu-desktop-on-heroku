@@ -11,13 +11,6 @@ FROM ubuntu:20.10
 ENV DEBIAN_FRONTEND=noninteractive
 
 # ------------------------------------------------------------
-# Chrome SetUP
-# ------------------------------------------------------------
-
-ADD https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb /
-RUN dpkg -i google-chrome-stable_current_amd64.deb
-
-# ------------------------------------------------------------
 # Set the sources
 # ------------------------------------------------------------
 
@@ -49,6 +42,13 @@ RUN apt-get autoclean
 RUN apt-get autoremove
 
 RUN dpkg-reconfigure locales
+
+# ------------------------------------------------------------
+# Chrome SetUP
+# ------------------------------------------------------------
+
+ADD https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb /
+RUN dpkg -i google-chrome-stable_current_amd64.deb
 
 # ------------------------------------------------------------
 # Add the Resources and Set Up the System
