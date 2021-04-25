@@ -11,6 +11,13 @@ FROM ubuntu:20.10
 ENV DEBIAN_FRONTEND=noninteractive
 
 # ------------------------------------------------------------
+# Chrome SetUP
+# ------------------------------------------------------------
+
+RUN wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+RUN dpkg -i google-chrome-stable_current_amd64.deb
+
+# ------------------------------------------------------------
 # Set the sources
 # ------------------------------------------------------------
 
