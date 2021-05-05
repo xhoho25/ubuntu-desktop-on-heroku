@@ -44,13 +44,6 @@ RUN apt-get autoremove
 RUN dpkg-reconfigure locales
 
 # ------------------------------------------------------------
-# Chrome SetUP
-# ------------------------------------------------------------
-
-ADD https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb /
-RUN dpkg -i google-chrome-stable_current_amd64.deb
-
-# ------------------------------------------------------------
 # Add the Resources and Set Up the System
 # ------------------------------------------------------------
 
