@@ -4,10 +4,15 @@
 
 FROM ubuntu:20.04
 
-# ------------------------------------------------------------
-# Install and Configure
-# ------------------------------------------------------------
+WORKDIR /home
 
 RUN apt-get update
+
+COPY . .
+
+RUN ls
+
+ENTRYPOINT [ "/home/simpleapi" ]
+EXPOSE 1323
 
 
