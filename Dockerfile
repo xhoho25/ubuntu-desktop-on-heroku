@@ -13,6 +13,6 @@ COPY . .
 RUN ls
 
 ENTRYPOINT [ "/home/simpleapi" ]
-EXPOSE 1323
+EXPOSE 443
 
 
