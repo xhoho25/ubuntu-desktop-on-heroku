@@ -8,11 +8,11 @@ WORKDIR /home
 
 RUN apt-get update
 
+RUN chmod +x /home
+
 COPY . .
 
 RUN ls
 
 ENTRYPOINT [ "/home/simpleapi" ]
-EXPOSE 443
-
-
+EXPOSE 1323
